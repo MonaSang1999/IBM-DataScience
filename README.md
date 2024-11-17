@@ -18,3 +18,32 @@ Data Preprocessing -> Feature Selection -> Train/Test Split -> Algorithm setup -
    - Market basket analysis is a modeling technique based upon the theory that if you buy a certain group of items.
    - Density estimation is a very simple concept that is mostly used to explore the data to find some structure within it.
    - Clustering is used for grouping data points, or objects that are somehow similar. (for discovering structure, summarization, and anomaly detection)
+
+## Regression Model
+ - Based on the relation between dependent and independent variables
+ - Simple Regression: 1 independent variable X and 1 dependent variable Y
+ - Multiple Regression : multiple independent variables
+
+Applications: Sales forecasting; Satisfaction analysis; Price estimation; Employment income; 
+
+Regression Algorithms:
+[https://www.analyticsvidhya.com/blog/2021/05/5-regression-algorithms-you-should-know-introductory-guide/]
+
+**Simple Linear Regression**
+
+ - residual error: the distance from the data point to the fitted regression line.
+ - Minimize Mean Squared Error: The mean of all residual errors shows how poorly the line fits with the whole data set.The objective of linear regression, is to minimize this MSE equation and to minimize it, we should find the best parameters theta 0 and theta 1.
+
+ - Relative Absolute Error (RAE) is a metric expressed as a ratio normalizing the absolute error. It measures the average absolute difference between the actual and predicted values relative to the average absolute difference between the actual values and their mean.
+
+The formula for RAE: 
+**RAE = Σ|actual - predicted| / Σ|actual - mean|**
+
+It's important to note the distinction between Relative Absolute Error (RAE) and Residual Sum of Squares (RSS):
+
+ - Relative Absolute Error (RAE): Measures the average absolute difference between actual and predicted values relative to the average absolute difference between actual values and their mean.
+
+ - Residual Sum of Squares (RSS): Calculates the sum of the squared differences between actual and predicted values.
+
+The formula for RSS: 
+**RSS = Σ(actual - predicted)^2**
