@@ -54,3 +54,12 @@ It's important to note the distinction between Relative Absolute Error (RAE) and
 
 The formula for RSS: 
 **RSS = Σ(actual - predicted)^2**
+
+
+**Multiple Linear Regression**
+
+How to estimate Theta?
+ - Ordinary Least Squares (Takes long time for large dataset)
+   [https://namanagr03.medium.com/deriving-ols-estimates-for-a-simple-regression-model-b3ca2b7157af]
+ - Gradient Descent
+   [https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21]
