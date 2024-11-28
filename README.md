@@ -63,3 +63,36 @@ How to estimate Theta?
    [https://namanagr03.medium.com/deriving-ols-estimates-for-a-simple-regression-model-b3ca2b7157af]
  - Gradient Descent
    [https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21]
+
+
+## Classification
+
+- Classification is a supervised learning approach which can be thought of as a means of categorizing or classifying some unknown items into a discrete set of classes.
+- Classification determines the class label for an unlabeled test case
+- Classifier: binary classification (Loan Default) & multi-class classification (Which Drug for patient to use)
+- Include decision trees, naive bayes, linear discriminant analysis, k-nearest neighbor, logistic regression, neural networks, and support vector machines. 
+
+**K-Nearst Neighbors**
+
+The K-Nearest Neighbors algorithm is a classification algorithm that takes a bunch of labeled points and uses them to learn how to label other points. This algorithm classifies cases based on their similarity to other cases. 
+- This algorithm classifies cases based on their similarity to other cases.
+- the distance between two cases is a measure of their dissimilarity. To calculate the similarity or conversely, the distance or dissimilarity of two data points can be done using Euclidean distance.
+
+1. pick a value for K
+2. calculate the distance of unknown case from all cases
+3. search for the K-observations in the training data that are nearest to the measurements of the unknown data point.
+4. predict the response of the unknown data point using the most popular response value from the K-Nearest Neighbors.
+
+**Accuracy**
+- Jaccard Index
+- F1 score
+- Log loss ( measures the performance of a classifier where the predicted output is a probability value between zero and one. )
+
+
+**Decison Tree**
+
+Decision trees are built by splitting the training set into distinct nodes, where one node contains all of or most of one category of the data.
+- First, choose an attribute from our dataset.
+ - the method uses recursive partitioning to split the training records into segments by minimizing the impurity at each step. Impurity of nodes is calculated by entropy of data in the node.
+- Calculate the significance of the attribute in the splitting of the data.
+- Next, split the data based on the value of the best attribute, then go to each branch and repeat it for the rest of the attributes. 
