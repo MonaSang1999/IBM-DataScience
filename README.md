@@ -96,3 +96,104 @@ Decision trees are built by splitting the training set into distinct nodes, wher
  - the method uses recursive partitioning to split the training records into segments by minimizing the impurity at each step. Impurity of nodes is calculated by entropy of data in the node.
 - Calculate the significance of the attribute in the splitting of the data.
 - Next, split the data based on the value of the best attribute, then go to each branch and repeat it for the rest of the attributes. 
+
+
+**Logistic Regression**
+
+When to use logistic regression?
+- if your data is binary: 0/1, Yes/No, True/False
+- if you need probabilistic result
+- when you need a linear decision boundary (we can also achieve a complex decision boundary using polynomial processing)
+- if you need to understand the impact of a feature (after finding the optimum parameters, a feature X with the weight Theta one close to zero has a smaller effect on the prediction than features with large absolute values of Theta one.)
+
+**Logistic vs. Linear Regression**
+
+- Logistic Regression: predict the class and probability of each same belonging to the class
+- Linear Regression: predict continuous values
+
+
+If we use linear regression in a classification problem?
+y = theta0 + theta1 X
+
+if y < 0.5, y-hat = 0
+if y >= 0.5, y-hat = 1
+
+We can find the class, but what is the probably that the record belongs to class 0? 0.5 is a threhold which works as a step function that outputs zero or one regardless of how big or small, positive or negative the input is. As long as it's greater than 0.5, it simply equals one and vice versa, regardless of how small the value y is, the output would be zero if it is less than 0.5. 
+
+- sigmoid function
+
+**Minimizing the cost function of the model**
+- Minimize the cost function J(Theta)
+- How? Using Gradient Descent
+- Gradient descent is an iterative approach to finding the minimum of a function.
+- Gradient descent is a technique to use the derivative of a cost function to change the parameter values to minimize the cost or error.
+
+Training algorithm
+1. initialize the parameters randomly
+2. Feed the cost function with training set, and calculate the error
+3. Calculate the gradient of cost function (partial derivatives)
+4. Update the weights with new values
+5. go back to step 2 and feed the function again until cost is small enough
+6. Predict the new customer X
+
+
+**Support Vector Machine**
+SVM is a supervised algorithm that classifies cased by finding a separator
+1. Mapping data to a high-dimensional feature space
+2. Finding a separator
+
+
+## Clustering
+
+Clustering can group data only unsupervised, based on the similarity of customers to each other. It will partition your customers into mutually exclusive groups. 
+
+A cluster is a group of data points or objects in a dataset that are similar to other objects in the group, and dissimilar to datapoints in other clusters.
+
+The difference between Classification and Clustering?
+- Classification algorithms predict categorical classed labels. This means assigning instances to predefined classes such as defaulted or not defaulted.
+- Classification is a supervised learning where each training data instance belongs to a particular class.
+- Clustering is unlabeled and the process is unsupervised. we can use a clustering algorithm such as k-means to group similar customers as mentioned, and assign them to a cluster, based on whether they share similar attributes, such as; age, education, and so on.
+
+Applications:
+- Retail/Marketing:
+  - Identifying buying patterns of customers
+  - Recommending new books or movies to new customers
+- Banking:
+  - Fraud detection in credit card use
+  - Identifying clusters of customers (eg.loyal)
+- Insurance:
+  - Fraud detection in claims analysis
+  - Insurance risk of customers
+- Publication:
+  - Auto-categorizing news based on their content
+  - Recommending similar new articles
+- Medicine:
+  - Characterizing patient behavior
+- Biology:
+  - Clustering genetic markers to identify family ties
+
+Why Clustering:
+- Exploratory data analysis
+- Summary generation
+- Outlier detection (Fraud detection, noise removal)
+- Finding duplicates
+- Pre-processing step
+
+Different Clustering algorithms
+- Partitioned-based Clustering (relatively efficient: K-Means, k-Median, Fuzzy c-Means)
+- Hierarchical Clustering (Produces trees of clusters: Agglomerative, Divisive)
+- Density-based Clustering (Produces arbitrary shaped clusters: DBSCAN)
+
+**K-Means Clustering**
+K-Means is a type of partitioning clustering, that is, it divides the data into K non-overlapping subsets or clusters without any cluster internal structure or labels. 
+
+
+1. Initialize k (pick representative k points called centroid)
+2. Distance calculation (pick different distance measures based on data)
+3. Assign each point to closest centroid, creating clusters
+4. Compute the new centroids for each cluster, recalculate the position of the k centroids
+5. Repeat until there are no more changes
+
+- relatively efficient on medium and large sized data sets;
+- produces sphere-like clusters because the clusters are shaped around the centroids;
+- its drawback is that we should pre-specify the number of clusters, and this is not an easy task. 
